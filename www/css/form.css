@@ -1,0 +1,59 @@
+* { margin: 0; padding: 0; box-sizing: inherit; }
+
+:root {
+	--red: #ed1c24;
+	--green: #00c35c;
+	--blue: #0d49cc;
+}
+
+body { box-sizing: border-box; font: normal 16px/1.5em 'Roboto',sans-serif; }
+
+h1 { font-size: 32px; line-height: 1.35em; margin-bottom: .5em; }
+p { margin-bottom: 1em; }
+a { color: var(--blue); }
+.nb { color: var(--red); }
+
+fieldset { border-width: 0; }
+.group { margin-bottom: 20px; }
+.group .title { margin-bottom: 5px; font-weight: bold; }
+.group .field { position: relative; }
+.group .field.radio label, .group .field.checkbox label { display: block; padding-left: 20px; position: relative; margin-top: 5px; }
+.group .field.radio label input[type="radio"], .group .field.checkbox label input[type="checkbox"] { position: absolute; left: 0; top: .25em; }
+.in-row { position: relative; }
+.hint-error { position: absolute; max-width: 100%; left: 0; top: 100%; background: var(--red); color: #fff; font-size: 12px; line-height: 14px; padding: 5px; z-index: 1; margin-top: 1px; }
+.hint-error:hover  { opacity: .5; }
+#status { margin-top: 10px; }
+#status.success { color: var(--green); font-weight: bold; }
+#status.error { color: var(--red); }
+#status .error-message { margin-bottom: 5px; }
+
+input, textarea, select, button { font-size: 16px; line-height: 16px; }
+input[type="text"], textarea { padding: 0 13px; border: 1px solid #dde1e6; border-radius: 2px; outline: none; transition: all .3s ease; color: #3b4256; }
+input[type="text"]:hover, textarea:hover { border-color: #babec2; }
+input[type="text"]:focus, textarea:focus { border-color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); }
+input[type="text"]:focus:invalid, textarea:focus:invalid { border-color: var(--red); box-shadow: inset 0 0 0 1px var(--red); }
+input[type="text"] { height: 40px; }
+textarea { padding-top: 11px; padding-bottom: 11px; }
+input[type="text"].wide, textarea.wide { width: 100%; }
+input[type="text"]:invalid, textarea:invalid, select:invalid, input[type="text"].error, textarea.error, select.error { border-color: var(--red); }
+input[type="button"], input[type="submit"], button { display: inline-block; background: var(--blue); border: none; text-align: center; padding: 0 15px; color: #fff; border-radius: 2px; height: 40px; outline: none; transition: background 0.3s ease, color 0.3s ease; cursor: pointer; }
+input[type="button"]:focus, input[type="submit"]:focus, button:focus { background: #0952ef; }
+input[type="button"]:hover, input[type="submit"]:hover, button:hover { background: #0952ef; }
+input[type="button"]:active, input[type="submit"]:active, button:active { background: #0c40b2; }
+input[type="button"][disabled], input[type="submit"][disabled], button[disabled] { background: transparent; box-shadow: inset 0 0 0 1px currentcolor; color: #999; cursor: not-allowed; }
+button.add-car { font-size: 24px; padding-bottom: 4px; }
+
+.car-fields { margin-bottom: 10px; }
+.car-fields:not(:last-child) .plus { display: none; }
+.car-fields div:not(:last-child) { margin-right: 10px; }
+
+@media (min-width: 768px) {
+	.car-fields { display: flex; flex-wrap: wrap; }
+}
+@media (max-width: 767px) {
+	body { font-size: 14px; }
+	h1 { font-size: 24px; }
+	.group .field.radio label input[type="radio"], .group .field.checkbox label input[type="checkbox"] { top: .2em; }
+	.car-fields:not(:last-child) { border-bottom: 1px solid #dde1e6; }
+	.car-fields div:not(:last-child) { margin-bottom: 10px; }
+}

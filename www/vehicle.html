@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Заявка на получение красного спецпропуска на авто</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mask.js"></script>
+	<script src="js/form.js"></script>
+	<link  href="css/form.css"rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+	<h1>Заявка на&nbsp;получение красного спецпропуска на&nbsp;авто</h1>
+	<p>Форма заявки на&nbsp;получение красного спецпропуска для&nbsp;поездок на&nbsp;автомобилях в&nbsp;границах Краснодарского края</p>
+	<p class="nb">Все поля обязательны к заполнению</p>
+	<form action="/handler/vehicle" method="post">
+		<input type="hidden" name="district_id" value="1"/>
+		<input type="hidden" name="pass_type" value="2"/>
+		<fieldset>
+			<div class="group">
+				<div class="title">Вид деятельности</div>
+				<div class="field radio">
+					<label><input type="radio" name="activity_kind" value="1" checked/> Организации, в которых невозможна приостановка деятельности по производственно-техническим условиям</label>
+					<label><input type="radio" name="activity_kind" value="2"/> Организации в сфере энергетики, теплоснабжения, водоподготовки, водоочистки и водоотведения</label>
+					<label><input type="radio" name="activity_kind" value="3"/> Организации, эксплуатирующие опасные производственные объекты и, в отношении которых действует режим постоянного государственного контроля в области промышленной безопасности</label>
+					<label><input type="radio" name="activity_kind" value="4"/> Организации, эксплуатирующие гидротехнические сооружения</label>
+					<label><input type="radio" name="activity_kind" value="5"/> Организации атомной промышленности</label>
+					<label><input type="radio" name="activity_kind" value="6"/> Строительные организации, приостановка деятельности которых создаст угрозу безопасности, здоровью и жизни людей</label>
+					<label><input type="radio" name="activity_kind" value="7"/> Организации сельскохозяйственной отрасли, занятые на весенних полевых работах</label>
+					<label><input type="radio" name="activity_kind" value="8"/> Организации сельскохозяйственной отрасли, осуществляющие производство, сельскохозяйственной продукции всех видов (в том числе табачной продукции и сырья)</label>
+					<label><input type="radio" name="activity_kind" value="9"/> Организации сельскохозяйственного машиностроения, в том числе осуществляющие реализацию сельскохозяйственной техники, её техническое обслуживание или ремонт, в том числе машинно-тракторные станции</label>
+					<label><input type="radio" name="activity_kind" value="10"/> Организации, осуществляющие реализацию и хранение сельскохозяйственной продукции, продуктов ее переработки, (включая продукты питания), удобрений, средств защиты растений, кормов и кормовых добавок, семян и посадочного материала</label>
+					<label><input type="radio" name="activity_kind" value="11"/> Организации, осуществляющие формирование товарных запасов сельскохозяйственной продукции и продовольствия на будущие периоды</label>
+					<label><input type="radio" name="activity_kind" value="12"/> Организации, занятые на сезонных полевых работах, рыбодобывающие, рыбоперерабатывающие предприятия, рыбоводные хозяйства</label>
+					<label><input type="radio" name="activity_kind" value="13"/> Организации, обслуживающие суда рыбопромыслового флота, животноводческие хозяйства, организации по искусственному осеменению сельскохозяйственных животных, производству, хранению и реализации семени сельскохозяйственных животных и перевозке криоматериала для искусственного осеменения животных</label>
+					<label><input type="radio" name="activity_kind" value="14"/> Организации в сфере информационных технологий и связи, включая почтовую связь, СМИ</label>
+					<label><input type="radio" name="activity_kind" value="15"/> Организации в сфере дорожного хозяйства, в том числе осуществляющие деятельность по строительству, эксплуатации дорог, мостов и тоннелей</label>
+					<label><input type="radio" name="activity_kind" value="16"/> Российские металлургические предприятия, цементные и стекольные заводы, производители отдельных видов конструкционных, изоляционных и других видов строительных материалов</label>
+					<label><input type="radio" name="activity_kind" value="17"/> Медицинские и аптечные организации (аптеки и аптечные пункты)</label>
+					<label><input type="radio" name="activity_kind" value="18"/> Учреждения, осуществляющие медицинские осмотры и оформление личных медицинских книжек для работников, которым в соответствии с законодательством требуется оформление личных медицинских книжек и деятельность которых связана с производством, транспортировкой, переработкой, хранением, реализацией продуктов питания</label>
+					<label><input type="radio" name="activity_kind" value="19"/> Медицинские организации, оказывающие стоматологические услуги, при наличии заболеваний и состояний, требующих оказания стоматологической помощи в экстренной или неотложной форме</label>
+					<label><input type="radio" name="activity_kind" value="20"/> Организации социального обслуживания</label>
+					<label><input type="radio" name="activity_kind" value="21"/> Организации оптовой торговли лекарственными средствами в медицинские и аптечные организации</label>
+					<label><input type="radio" name="activity_kind" value="22"/> Производители продуктов питания и товаров первой необходимости</label>
+					<label><input type="radio" name="activity_kind" value="23"/> Организации, осуществляющие продажу продовольственных и непродовольственных товаров дистанционным способом в том числе с условиями доставки</label>
+					<label><input type="radio" name="activity_kind" value="24"/> Организации розничной торговли, реализующие продовольственные товары и (или) непродовольственные товары первой необходимости, указанные в распоряжении Правительства РФ от 27.03.2020 № 762-р (при условии доступа в помещения объектов розничной торговли посредством отдельного входа)</label>
+					<label><input type="radio" name="activity_kind" value="25"/> Организации, оказывающие услуги общественного питания, исключительно с обслуживанием на вынос или доставкой заказов</label>
+					<label><input type="radio" name="activity_kind" value="26"/> Ярмарки, выставки-ярмарки, универсальные ярмарки, осуществляющие реализацию продовольственных товаров</label>
+					<label><input type="radio" name="activity_kind" value="27"/> Рынки (в том числе организованных в виде торговых комплексов и торговых центров), осуществляющие реализацию продовольственных товаров</label>
+					<label><input type="radio" name="activity_kind" value="28"/> Производители материалов, ингредиентов, сырья и комплектующих, необходимых для производства продуктов питания и товаров первой необходимости</label>
+					<label><input type="radio" name="activity_kind" value="29"/> Поставщики, дистрибьюторы, транспортно-логистические организации, логистические комплексы</label>
+					<label><input type="radio" name="activity_kind" value="30"/> Распределительные центры, склады, оптовые рынки</label>
+					<label><input type="radio" name="activity_kind" value="31"/> Службы доставки заказов, курьерские службы, пункты выдачи заказов</label>
+					<label><input type="radio" name="activity_kind" value="32"/> Организации, оказывающие услуги по подготовке, обработке, упаковке продуктов питания и товаров первой необходимости и иные подобные услуги</label>
+					<label><input type="radio" name="activity_kind" value="33"/> Строительные, ремонтные, сервисные организации, задействованные в строительстве, оснащении, переоснащении, оборудовании и ремонте магазинов, распределительных центров и иных объектов торговой инфраструктуры</label>
+					<label><input type="radio" name="activity_kind" value="34"/> Производители фасовочных и упаковочных материалов, в том числе соответствующих полиграфических комплексов, упаковки из бумаги и картона, производители целлюлозы, бумаги и картона, сборщики, заготовители и перевозчики макулатуры</label>
+					<label><input type="radio" name="activity_kind" value="35"/> Управляющие компании, обеспечивающие функционирование объектов недвижимости, в которых располагаются организации, обеспечивающие население продуктами питания и товарами первой необходимости</label>
+					<label><input type="radio" name="activity_kind" value="36"/> Организации, осуществляющие деятельность по обеспечению продовольственной безопасности РФ</label>
+					<label><input type="radio" name="activity_kind" value="37"/> Организации, выполняющие неотложные работы в условиях чрезвычайных обстоятельств, в иных случаях, ставящих под угрозу жизнь и нормальные жизненные условия населения</label>
+					<label><input type="radio" name="activity_kind" value="38"/> Предприятия, выпускающие средства индивидуальной защиты, дезинфицирующие средства, лекарственные средства, медицинские изделия, теплотелевизионные регистраторы, бесконтактные термометры и установки обеззараживания воздуха</label>
+					<label><input type="radio" name="activity_kind" value="39"/> Предприятия, выпускающие материалы, сырье и комплектующие изделия, необходимые для их производства</label>
+					<label><input type="radio" name="activity_kind" value="40"/> Организации, деятельность которых связана с защитой здоровья населения и предотвращением распространения новой коронавирусной инфекции</label>
+					<label><input type="radio" name="activity_kind" value="41"/> Организации, обеспечивающие непрерывность производственно-технологической деятельности медицинских и аптечных организаций, в том числе осуществляющие производство и техническое обслуживание медицинской техники</label>
+					<label><input type="radio" name="activity_kind" value="42"/> Организации, выполняющие строительство (ремонт) объектов медицинского назначения</label>
+					<label><input type="radio" name="activity_kind" value="43"/> Организации медицинской промышленности</label>
+					<label><input type="radio" name="activity_kind" value="44"/> Организации в сфере обращения с отходами производства и потребления</label>
+					<label><input type="radio" name="activity_kind" value="45"/> Организации, осуществляющие жилищно-коммунальное обслуживание населения</label>
+					<label><input type="radio" name="activity_kind" value="46"/> Организации системы нефтепродуктообеспечения</label>
+					<label><input type="radio" name="activity_kind" value="47"/> Организации, осуществляющие транспортное обслуживание населения</label>
+					<label><input type="radio" name="activity_kind" value="48"/> Организации, осуществляющие лечение, профилактику и диагностику болезней животных, в том числе проводящие ветеринарные и ветеринарно-санитарные экспертизы</label>
+					<label><input type="radio" name="activity_kind" value="49"/> Организации, осуществляющие производство, обращение и хранение ветеринарных лекарственных средств, средств диагностики болезней животных, табачной продукции и сырья, виноградарской и винодельческой продукции, зоотоваров</label>
+					<label><input type="radio" name="activity_kind" value="50"/> Организации, осуществляющие неотложные ремонтные и погрузочно-разгрузочные работы</label>
+					<label><input type="radio" name="activity_kind" value="51"/> Банковские организации</label>
+					<label><input type="radio" name="activity_kind" value="52"/> Финансовые организации, предоставляющие финансовые услуги в части неотложных функций (в первую очередь услуги по расчётам и платежам)</label>
+					<label><input type="radio" name="activity_kind" value="53"/> Организации, предоставляющие  ритуальные услуги (в том числе – торгующие похоронными принадлежностями)</label>
+					<label><input type="radio" name="activity_kind" value="54"/> Организации оказывающие дополнительные платные образовательные услуги дистанционным способом</label>
+					<label><input type="radio" name="activity_kind" value="55"/> Организации, предоставляющие услуги по подбору жилья, не предусматривающие при их оказании (предоставлении) присутствие физического лица (дистанционное оказание услуг)</label>
+					<label><input type="radio" name="activity_kind" value="56"/> Организации, оказывающие услуги по мойке автомобилей индивидуальных предпринимателей и организаций, осуществляющих реализацию продовольственных товаров и (или) непродовольственных товаров первой необходимости, установленных распоряжением Правительства РФ 27.03.2020 № 762-р</label>
+					<label><input type="radio" name="activity_kind" value="57"/> Организации, оказывающие услуги по мойке автомобилей с использованием оборудования самообслуживания</label>
+					<label><input type="radio" name="activity_kind" value="58"/> Гостиницы, объекты санаторно-курортного лечения и отдыха и иные средства размещения лиц, находящихся в служебных командировках или служебных поездках, при представлении подтверждающих документов</label>
+					<label><input type="radio" name="activity_kind" value="59"/> Организации, предоставляющие услуги по дезинфекции, дезинсекции, дератизации зданий, промышленного оборудования</label>
+					<label><input type="radio" name="activity_kind" value="60"/> Организации, осуществляющие деятельность по оказанию услуг (выполнению работ) по техническому обслуживанию и ремонту автотранспортных средств</label>
+					<label><input type="radio" name="activity_kind" value="61"/> Организации, оказывающие скорую ветеринарную помощь для животных (при условии оказания такой помощи по предварительной записи)</label>
+					<label><input type="radio" name="activity_kind" value="62"/> Организации, осуществляющие ТО и ремонт автотранспорта</label>
+					<label><input type="radio" name="activity_kind" value="63"/> Организации, оказывающие скорую ветеринарную помощь</label>
+					<label><input type="radio" name="activity_kind" value="64"/> Организации, образующие инфраструктуру поддержки субъектов МСП</label>
+					<label><input type="radio" name="activity_kind" value="65"/> Организации, выполняющие строительство, реконструкцию или ремонт объектов здравоохранения и образования</label>
+					<label><input type="radio" name="activity_kind" value="66"/> Организации, оказывающие услуги по стирке и химчистке изделий, ремонту одежды и обуви, ремонту бытовой, компьютерной техники, сотовых телефонов (начиная с 20 апреля)</label>
+					<label><input type="radio" name="activity_kind" value="67"/> Организации, осуществляющие ремонт оборудования (начиная с 20 апреля)</label>
+					<label><input type="radio" name="activity_kind" value="68"/> Организации, осуществляющие розничную торговлю автомобильными деталями, узлами и принадлежностями (начиная с 20 апреля)</label>
+					<label><input type="radio" name="activity_kind" value="69"/> Организации, осуществляющие розничную торговлю товарами для предупреждения пожаров и пожаротушения (начиная с 20 апреля)</label>
+					<label><input type="radio" name="activity_kind" value="70"/> Производители мебели, текстильных изделий, одежды, обуви, изделий из пробки и дерева, а также предприятия, обрабатывающие древесину (начиная с 20 апреля)
+				</div>
+			</div>
+			<div class="group">
+				<div class="title"><label for="field-title">Полное название организации, индивидуального предпринимателя</label></div>
+				<div class="field"><input type="text" name="title" id="field-title" placeholder="Полное название организации" class="wide" required/></div>
+			</div>
+			<div class="group">
+				<div class="title"><label for="field-address">Адрес, местонахождение</label></div>
+				<div class="field"><textarea name="address" placeholder="Адрес, местонахождение" id="field-address" rows="2" class="wide" required></textarea></div>
+			</div>
+			<div class="group">
+				<div class="title"><label for="field-inn">ИНН</label></div>
+				<div class="field"><input type="text" size="22" name="inn" id="field-inn" placeholder="ИНН" minlength="10" maxlength="12" pattern="[0-9]{10}|[0-9]{12}" required/></div>
+			</div>
+			<div class="group">
+				<div class="title"><label for="field-ogrn">ОГРН</label></div>
+				<div class="field"><input type="text" size="22" name="ogrn" id="field-ogrn" placeholder="ОГРН" minlength="13" maxlength="13" pattern="[0-9]{13}" required/></div>
+			</div>
+			<div class="group">
+				<div class="title"><label for="field-ceo_name">Ф.И.О. руководителя</label></div>
+				<div class="field"><input type="text" name="ceo_name" id="field-ceo_name" placeholder="Ф.И.О. руководителя" class="wide" required/></div>
+			</div>
+			<div class="group">
+				<div class="title"><label for="field-ceo_phone">Контактный телефон руководителя</label></div>
+				<div class="field"><input type="text" size="22" name="ceo_phone" id="field-ceo_phone" placeholder="+79001234567" pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required/></div>
+			</div>
+			<div class="group">
+				<div class="title"><label for="field-ceo_email">E-mail руководителя</label></div>
+				<div class="field"><input type="text" size="22" name="ceo_email" id="field-ceo_email" placeholder="E-mail" required/></div>
+			</div>
+			<div class="group people">
+				<div class="title">Перечень автомобилей, для которых нужны пропуска на&nbsp;время карантина</div>
+				<div class="field car-fields">
+					<div class="in-row"><input type="text" size="11" name="car" placeholder="К001АА23rus" required/></div>
+					<div class="in-row"><input type="text" size="22" name="lastname" placeholder="Фамилия" required/></div>
+					<div class="in-row"><input type="text" size="22" name="firstname" placeholder="Имя" required/></div>
+					<div class="in-row"><input type="text" size="22" name="middlename" placeholder="Отчество" required/></div>
+					<div class="in-row plus"><button type="button" class="add-car">+</button></div>
+				</div>
+			</div>
+			<div class="group">
+				<div class="field checkbox">
+					<label><input type="checkbox" name="personal" value="1" checked disabled/> Согласен(на) на&nbsp;обработку персональных данных</label>
+					<label><input type="checkbox" name="authenticity" value="1" checked disabled/> Подтверждаю достоверность изложенных сведений и необходимость этих машин в период карантина</label>
+				</div>
+			</div>
+			<div class="finish"><button type="submit">Отправить заявку</button></div>
+			<div id="status"></div>
+		</fieldset>
+	</form>
+</body>
+</html>

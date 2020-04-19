@@ -103,11 +103,11 @@
 			</div>
 			<div class="group">
 				<div class="title"><label for="field-inn">ИНН</label></div>
-				<div class="field"><input type="text" size="22" name="inn" id="field-inn" placeholder="ИНН" minlength="10" maxlength="12" pattern="[0-9]{10}|[0-9]{12}" required/></div>
+				<div class="field"><input type="text" size="22" name="inn" id="field-inn" placeholder="ИНН" minlength="10" maxlength="12" pattern="[0-9]{10}|[0-9]{12}" data-mask="000000000000" required/></div>
 			</div>
 			<div class="group">
 				<div class="title"><label for="field-ogrn">ОГРН</label></div>
-				<div class="field"><input type="text" size="22" name="ogrn" id="field-ogrn" placeholder="ОГРН" minlength="13" maxlength="13" pattern="[0-9]{13}" required/></div>
+				<div class="field"><input type="text" size="22" name="ogrn" id="field-ogrn" placeholder="ОГРН" minlength="13" maxlength="13" pattern="[0-9]{13}|[0-9]{15}" data-mask="000000000000000" required/></div>
 			</div>
 			<div class="group">
 				<div class="title"><label for="field-ceo_name">Ф.И.О. руководителя</label></div>
@@ -115,7 +115,7 @@
 			</div>
 			<div class="group">
 				<div class="title"><label for="field-ceo_phone">Контактный телефон руководителя</label></div>
-				<div class="field"><input type="text" size="22" name="ceo_phone" id="field-ceo_phone" placeholder="+79001234567" pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required/></div>
+				<div class="field"><input type="text" size="22" name="ceo_phone" id="field-ceo_phone" placeholder="+79001234567" pattern="\+7\d{10}" data-mask="+70000000000" required/></div>
 			</div>
 			<div class="group">
 				<div class="title"><label for="field-ceo_email">E-mail руководителя</label></div>

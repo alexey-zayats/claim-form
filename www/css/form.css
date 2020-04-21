@@ -23,9 +23,10 @@ fieldset { border-width: 0; }
 .hint-error { position: absolute; max-width: 100%; left: 0; top: 100%; background: var(--red); color: #fff; font-size: 12px; line-height: 14px; padding: 5px; z-index: 1; margin-top: 1px; }
 .hint-error:hover  { opacity: .5; }
 #status { margin-top: 10px; }
-#status.success { color: var(--green); font-weight: bold; }
+#status.success, #success { color: var(--green); font-weight: bold; }
 #status.error { color: var(--red); }
 #status .error-message { margin-bottom: 5px; }
+#success { display: inline; vertical-align: middle; margin-left: 20px; }
 
 input, textarea, select, button { font-size: 16px; line-height: 16px; }
 input[type="text"], textarea { padding: 0 13px; border: 1px solid #dde1e6; border-radius: 2px; outline: none; transition: all .3s ease; color: #3b4256; }
@@ -41,11 +42,14 @@ input[type="button"]:focus, input[type="submit"]:focus, button:focus { backgroun
 input[type="button"]:hover, input[type="submit"]:hover, button:hover { background: #0952ef; }
 input[type="button"]:active, input[type="submit"]:active, button:active { background: #0c40b2; }
 input[type="button"][disabled], input[type="submit"][disabled], button[disabled] { background: transparent; box-shadow: inset 0 0 0 1px currentcolor; color: #999; cursor: not-allowed; }
-button.add-car { font-size: 24px; padding-bottom: 4px; }
+button.add-car, button.remove-car { font-size: 24px; padding-bottom: 4px; }
+button.square { padding-left: 0; padding-right: 0; width: 40px; }
 
 .car-fields { margin-bottom: 10px; }
+.group .title + .car-fields .minus { display: none; }
 .car-fields:not(:last-child) .plus { display: none; }
 .car-fields div:not(:last-child) { margin-right: 10px; }
+.car-fields .minus, .car-fields .plus { display: inline-block; }
 
 @media (min-width: 768px) {
 	.car-fields { display: flex; flex-wrap: wrap; }

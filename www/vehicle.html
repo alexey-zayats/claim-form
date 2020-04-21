@@ -128,7 +128,8 @@
 					<div class="in-row"><input type="text" size="22" name="lastname" placeholder="Фамилия" required/></div>
 					<div class="in-row"><input type="text" size="22" name="firstname" placeholder="Имя" required/></div>
 					<div class="in-row"><input type="text" size="22" name="middlename" placeholder="Отчество" required/></div>
-					<div class="in-row plus"><button type="button" class="add-car">+</button></div>
+					<div class="in-row minus"><button type="button" class="square remove-car">&minus;</button></div>
+					<div class="in-row plus"><button type="button" class="square add-car">+</button></div>
 				</div>
 			</div>
 			<div class="group">
@@ -137,7 +138,7 @@
 					<label><input type="checkbox" name="authenticity" value="1" required/> Подтверждаю достоверность изложенных сведений и необходимость этих машин в период карантина</label>
 				</div>
 			</div>
-			<div class="finish"><button type="submit">Отправить заявку</button></div>
+			<div class="finish"><button type="submit">Отправить заявку</button><span id="success">Ваша заявка отправлена</span></div>
 			<div id="status"></div>
 		</fieldset>
 	</form>

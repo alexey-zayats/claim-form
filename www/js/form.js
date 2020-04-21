@@ -3,6 +3,9 @@ $(document).ready(function(){
 		e.preventDefault();
 		$(this).parents(".car-fields").first().clone().appendTo($(this).parents(".group").first());
 		$(this).parents(".group").find(".car-fields").last().find("input:text").val("");
+	}).on("click","button.remove-car", function(e){
+		e.preventDefault();
+		$(this).parents(".car-fields").first().remove();
 	}).on("keypress", "input", function(){
 		$(this).removeClass("error").parents(".field").first().find(".hint-error").remove();
 	});
@@ -30,7 +33,7 @@ $(document).ready(function(){
 			formObj[$(this).attr("name")] = $(this).val();
 		});
 		window.formData = formObj;
-		$("#status").removeAttr("class").text("");
+		$("#status").removeAttr("class").empty();
 		$.ajax({
 			url: $form.attr("action"),
 			type: "POST",
@@ -40,7 +43,7 @@ $(document).ready(function(){
 		}).always(function(){
 
 	    }).done(function(){
-		    $("#status").addClass("success").text("Ваша заявка отправлена");
+		    $("#success").text("Ваша заявка отправлена");
 	    }).fail(function(jqXHR){
 //		    $("#status").addClass("error").text(jqXHR.responseJSON.message ? jqXHR.responseJSON.message : "Произошла ошибка. Попробуйте позже");
 		    window.ajaxErrors = jqXHR;

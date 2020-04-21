@@ -15,7 +15,7 @@ $(document).ready(function(){
 	$("form").on("submit", function(e){
 		e.preventDefault();
 		$form = $(this);
-		// $form.find("button[type='submit']").prop("disabled",true);
+		$form.find("button[type='submit']").prop("disabled",true);
 		var formObj = {};
 		$form.find(".group:not('.people') input:text, .group textarea, input:hidden").each(function(){
 			formObj[$(this).attr("name")] = $(this).val();

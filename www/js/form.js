@@ -6,9 +6,9 @@ $(document).ready(function(){
 	}).on("keypress", "input", function(){
 		$(this).removeClass("error").parents(".field").first().find(".hint-error").remove();
 	});
-	$("#field-ceo_phone").mask("+7 (000) 000-00-00");
-	$("#field-inn").mask("000000000000");
-	$("#field-ogrn").mask("000000000000000");
+	$("input[data-mask]").each(function(){
+		$(this).mask($(this).data("mask"));
+	});
 	$("form").on("submit", function(e){
 		e.preventDefault();
 		$form = $(this);

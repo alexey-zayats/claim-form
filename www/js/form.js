@@ -38,7 +38,7 @@ $(document).ready(function(){
 			dataType: 'json',
 			data: JSON.stringify(formObj)
 		}).always(function(){
-			
+
 	    }).done(function(){
 		    $("#status").addClass("success").text("Ваша заявка отправлена");
 	    }).fail(function(jqXHR){

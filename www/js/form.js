@@ -8,7 +8,7 @@ $(document).ready(function(){
 	});
 	$("#field-ceo_phone").mask("+7 (000) 000-00-00");
 	$("#field-inn").mask("000000000000");
-	$("#field-ogrn").mask("0000000000000");
+	$("#field-ogrn").mask("000000000000000");
 	$("form").on("submit", function(e){
 		e.preventDefault();
 		$form = $(this);
@@ -38,7 +38,7 @@ $(document).ready(function(){
 			dataType: 'json',
 			data: JSON.stringify(formObj)
 		}).always(function(){
-			
+
 	    }).done(function(){
 		    $("#status").addClass("success").text("Ваша заявка отправлена");
 	    }).fail(function(jqXHR){

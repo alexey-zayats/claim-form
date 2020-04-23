@@ -12,6 +12,7 @@ h1 { font-size: 32px; line-height: 1.35em; margin-bottom: .5em; }
 p { margin-bottom: 1em; }
 a { color: var(--blue); }
 .nb { color: var(--red); }
+.uppercase { text-transform: uppercase; }
 
 fieldset { border-width: 0; }
 .group { margin-bottom: 20px; }
@@ -21,6 +22,7 @@ fieldset { border-width: 0; }
 .group .field.radio label input[type="radio"], .group .field.checkbox label input[type="checkbox"] { position: absolute; left: 0; top: .25em; }
 .group .description { font-size: 13px; line-height: 1.25em; margin-top: 10px; opacity: .7; }
 .in-row { position: relative; }
+.in-row.wide { width: 100%; margin-bottom: 10px; }
 .hint-error { position: absolute; max-width: 100%; left: 0; top: 100%; background: var(--red); color: #fff; font-size: 12px; line-height: 14px; padding: 5px; z-index: 1; margin-top: 1px; }
 .hint-error:hover  { opacity: .5; }
 #status { margin-top: 10px; }

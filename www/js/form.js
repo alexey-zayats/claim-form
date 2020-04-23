@@ -8,6 +8,17 @@ $(document).ready(function(){
 		$(this).parents(".car-fields").first().remove();
 	}).on("keypress", "input", function(){
 		$(this).removeClass("error").parents(".field").first().find(".hint-error").remove();
+	}).on("change", "input[name='reason']", function(){
+		if ($(this).val() == "4"){
+			$("#other-reason").show().find("textarea").prop("required", true);
+		} else {
+			$("#other-reason").hide().find("textarea").prop("required", false);
+		}
+		if ($(this).val() == "2"){
+			$("#who_needs_help, #who_needs_help_phone").show().find("input:text").prop("required", true);
+		} else {
+			$("#who_needs_help, #who_needs_help_phone").hide().find("input:text").prop("required", false);
+		}
 	});
 	$("input[data-mask]").each(function(){
 		$(this).mask($(this).data("mask"));

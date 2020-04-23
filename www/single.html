@@ -12,15 +12,25 @@
 </head>
 <body>
 	<h1>Заявка на&nbsp;получение красного спецпропуска на&nbsp;авто</h1>
-	<p>Форма заявки на&nbsp;получение красного спецпропуска для&nbsp;поездок на&nbsp;автомобилях в&nbsp;границах Краснодарского края</p>
+	<p>Форма заявки на&nbsp;получение красного спецпропуска для&nbsp;поездок на&nbsp;автомобиле в&nbsp;границах Краснодарского края</p>
 	<p class="nb">Все поля обязательны к заполнению</p>
 	<form action="/handler/vehicle" method="post">
 		<input type="hidden" name="district_id" type="number" value="10"/>
 		<input type="hidden" name="pass_type" type="number" value="2"/>
+		<input type="hidden" name="ceo_name" type="number" value=""/>
 		<fieldset>
+			<div class="group people">
+				<div class="title"><label for="field-lastname">Ваши Ф.И.О. и номер автомобиля</label></div>
+				<div class="field car-fields">
+					<div class="in-row wide"><input type="text" class="wide" name="lastname" id="field-lastname" placeholder="Фамилия" required/></div>
+					<div class="in-row wide"><input type="text" class="wide" name="firstname" placeholder="Имя" required/></div>
+					<div class="in-row wide"><input type="text" class="wide" name="middlename" placeholder="Отчество" required/></div>
+					<div class="in-row"><input type="text" size="11" name="car" placeholder="К001АА23" data-mask="a000a000" class="uppercase" required/></div>
+				</div>
+			</div>
 			<div class="group">
-				<div class="title"><label for="field-ceo_name">Ваши Ф.И.О.</label></div>
-				<div class="field"><input type="text" name="ceo_name" id="field-ceo_name" placeholder="" class="wide" required/></div>
+				<div class="title"><label for="field-city_from">Город проживания</label></div>
+				<div class="field"><input type="text" size="22" name="city_from" id="field-city_from" placeholder="" required/></div>
 			</div>
 			<div class="group">
 				<div class="title"><label for="field-address">Адрес проживания</label></div>
@@ -28,43 +38,60 @@
 				<div class="description">Пример: 350000, Краснодарский край, г.&nbsp;Геленджик, ул.&nbsp;Луначарского,&nbsp;д.&nbsp;1, кв.&nbsp;25</div>
 			</div>
 			<div class="group">
-				<div class="title"><label for="field-inn">ИНН</label></div>
-				<div class="field"><input type="text" size="22" name="inn" id="field-inn" placeholder="ИНН" minlength="10" maxlength="12" pattern="[0-9]{12}" data-mask="000000000000" required/></div>
+				<div class="title"><label for="field-city_to">Город назначения</label></div>
+				<div class="field"><input type="text" size="22" name="city_to" id="field-city_to" placeholder="" required/></div>
 			</div>
 			<div class="group">
-				<div class="title"><label for="field-ceo_phone">Контактный телефон</label></div>
-				<div class="field"><input type="text" size="22" name="ceo_phone" id="field-ceo_phone" placeholder="+79001234567" pattern="\+7\d{10}" data-mask="+70000000000" required/></div>
-			</div>
-			<div class="group">
-				<div class="title"><label for="field-ceo_email">E-mail</label></div>
-				<div class="field"><input type="text" size="22" name="ceo_email" id="field-ceo_email" placeholder="E-mail" required/></div>
-			</div>
-			<div class="group">
-				<div class="title"><label for="field-ceo_phone">Причина поездки</label></div>
-				<div class="field radio">
-					<label><input type="radio" name="reason" value="1" checked/> Рождение ребенка (подтверждается свидетелством о рождении, или госпитализации)</label>
-					<label><input type="radio" name="reason" value="2"/> Помощь родителям больным росдственникам (подтверждается фото или сканом выписки с иагнозом)</label>
-					<label><input type="radio" name="reason" value="3"/> Похороны, прощение с усопшим (необходимо предоставить свидетельство о смерти)</label>
-				</div>
-			</div>
-			<div class="group">
-				<div class="title"><label for="field-ceo_phone">Адрес человека, за которым требуется постоянный уход</label></div>
+				<div class="title"><label for="field-address_dest">Адрес назначения</label></div>
 				<div class="field"><textarea name="address_dest" placeholder="" id="field-address_dest" rows="2" class="wide" required></textarea></div>
 				<div class="description">Пример: 350000, Краснодарский край, г.&nbsp;Геленджик, ул.&nbsp;Луначарского,&nbsp;д.&nbsp;1, кв.&nbsp;25</div>
 			</div>
 			<div class="group">
-				<div class="title"><label for="field-ceo_email">Ссылка на документы, подтверждающие ваши слова</label></div>
-				<div class="field"><input type="text" name="link" id="field-link" class="wide" required/></div>
-				<div class="description">Фотографии или сканы документов необходимо загрузить на любой облачный сервис (Облако Mail.Ru, Яндекс.Диск и др.) Это может быть справка о недееспособности; пенсионное удостоверение; справка о заболевании эндокринной системы; справка о заболевании органов дыхания; справка о заболевании системы кровообращения; справка о заболевании мочеполовой системы; справка, указывающая, что человек перенёс транспортировку органов и тканей; справка об онкологическом заболевании и т.п.</div>
+				<div class="title"><label for="field-date_from">Дата, с&nbsp;которой вам необходимо соервешить поездку (поездки)</label></div>
+				<div class="field"><input type="text" size="11" name="date_from" id="field-date_from" placeholder="ДД.ММ.ГГГГ" data-mask="00.00.0000" required/></div>
 			</div>
-			<div class="group people">
-				<div class="title">Перечень автомобилей, для которых нужны пропуска на&nbsp;время карантина</div>
-				<div class="field car-fields">
-					<div class="in-row"><input type="text" size="11" name="car" placeholder="К001АА23rus" required/></div>
-					<div class="in-row"><input type="text" size="22" name="lastname" placeholder="Фамилия" required/></div>
-					<div class="in-row"><input type="text" size="22" name="firstname" placeholder="Имя" required/></div>
-					<div class="in-row"><input type="text" size="22" name="middlename" placeholder="Отчество" required/></div>
+			<div class="group">
+				<div class="title"><label for="field-date_to">Дата вплоть до которой необходимо совершать поездку (поездки)</label></div>
+				<div class="field"><input type="text" size="11" name="date_to" id="field-date_to" placeholder="ДД.ММ.ГГГГ" data-mask="00.00.0000" required/></div>
+			</div>
+			<div class="group">
+				<div class="title">Причина, по которой вам необходимо совершать постоянные поездки</div>
+				<div class="field radio">
+					<label><input type="radio" name="reason" value="1" checked/> Рождение ребенка (подтверждается свидетелством о рождении, или госпитализации)</label>
+					<label><input type="radio" name="reason" value="2"/> Помощь родителям больным родственникам (подтверждается фото или сканом выписки с иагнозом)</label>
+					<label><input type="radio" name="reason" value="3"/> Похороны, прощение с усопшим (необходимо предоставить свидетельство о смерти)</label>
+					<label><input type="radio" name="reason" value="4"/> Другая причина</label>
 				</div>
+			</div>
+			<div class="group" id="other-reason" style="display: none;">
+				<div class="title"><label for="field-other_reason">Другая причина</label></div>
+				<div class="field"><textarea name="other_reason" placeholder="" id="field-other_reason" rows="2" class="wide"></textarea></div>
+				<div class="description">Пожалуйста, максимально подробно опишите сложившуюся жизненную ситуацию</div>
+			</div>
+			<div class="group" id="who_needs_help" style="display: none;">
+				<div class="title"><label for="field-who_needs_help">Ф.И.О человека, за&nbsp;которым требуется постоянный уход</label></div>
+				<div class="field"><input type="text" class="wide" name="who_needs_help" id="field-who_needs_help" placeholder=""/></div>
+			</div>
+			<div class="group" id="who_needs_help_phone" style="display: none;">
+				<div class="title"><label for="field-who_needs_help_phone">Контактный телефон человека, за которым требуется постоянный уход</label></div>
+				<div class="field"><input type="text" size="22" name="who_needs_help_phone" id="field-who_needs_help_phone" placeholder="+79001234567" pattern="\+7\d{10}" data-mask="+70000000000" required/></div>
+			</div>
+			<div class="group">
+				<div class="title"><label for="field-doc_links">Ссылка на документы, подтверждающие ваши слова</label></div>
+				<div class="field"><textarea name="doc_links" placeholder="" id="field-doc_links" rows="2" class="wide" required></textarea></div>
+				<div class="description">Фотографии или сканы документов необходимо загрузить на любой облачный сервис (Облако Mail.Ru, Яндекс.Диск и др.) Это может быть справка о недееспособности; пенсионное удостоверение; справка о заболевании эндокринной системы; справка о заболевании органов дыхания; справка о заболевании системы кровообращения; справка о заболевании мочеполовой системы; справка, указывающая, что человек перенёс транспортировку органов и тканей; справка об онкологическом заболевании и т.п. Указывайте по одному на строку</div>
+			</div>
+			<div class="group">
+				<div class="title"><label for="field-inn">ИНН</label></div>
+				<div class="field"><input type="text" size="22" name="inn" id="field-inn" placeholder="ИНН" minlength="12" maxlength="12" pattern="[0-9]{12}" data-mask="000000000000" required/></div>
+			</div>
+			<div class="group">
+				<div class="title"><label for="field-ceo_phone">Ваш контактный телефон</label></div>
+				<div class="field"><input type="text" size="22" name="ceo_phone" id="field-ceo_phone" placeholder="+79001234567" pattern="\+7\d{10}" data-mask="+70000000000" required/></div>
+			</div>
+			<div class="group">
+				<div class="title"><label for="field-ceo_email">Ваш адрес электронной почты</label></div>
+				<div class="field"><input type="text" size="22" name="ceo_email" id="field-ceo_email" placeholder="E-mail" required/></div>
 			</div>
 			<div class="group">
 				<div class="field checkbox">

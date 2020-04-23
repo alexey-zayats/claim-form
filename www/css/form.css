@@ -20,7 +20,7 @@ fieldset { border-width: 0; }
 .group .field { position: relative; }
 .group .field.radio label, .group .field.checkbox label { display: block; padding-left: 20px; position: relative; margin-top: 5px; }
 .group .field.radio label input[type="radio"], .group .field.checkbox label input[type="checkbox"] { position: absolute; left: 0; top: .25em; }
-.group .description { font-size: 13px; line-height: 1.25em; margin-top: 10px; opacity: .7; }
+.group .description { font-size: 13px; line-height: 1.25em; margin-top: 10px; opacity: .5; }
 .in-row { position: relative; }
 .in-row.wide { width: 100%; margin-bottom: 10px; }
 .hint-error { position: absolute; max-width: 100%; left: 0; top: 100%; background: var(--red); color: #fff; font-size: 12px; line-height: 14px; padding: 5px; z-index: 1; margin-top: 1px; }

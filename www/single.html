@@ -14,10 +14,10 @@
 	<h1>Заявка на&nbsp;получение красного спецпропуска на&nbsp;авто</h1>
 	<p>Форма заявки на&nbsp;получение красного спецпропуска для&nbsp;поездок на&nbsp;автомобиле в&nbsp;границах Краснодарского края</p>
 	<p class="nb">Все поля обязательны к заполнению</p>
-	<form action="/handler/vehicle" method="post">
+	<form action="/handler/single" method="post">
 		<input type="hidden" name="district_id" type="number" value="10"/>
 		<input type="hidden" name="pass_type" type="number" value="2"/>
-		<input type="hidden" name="ceo_name" type="number" value=""/>
+		<input type="hidden" name="ceo_name" value=""/>
 		<fieldset>
 			<div class="group people">
 				<div class="title"><label for="field-lastname">Ваши Ф.И.О. и номер автомобиля, зарегистрированного в&nbsp;России</label></div>

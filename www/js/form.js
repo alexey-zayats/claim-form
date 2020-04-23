@@ -17,6 +17,11 @@ $(document).ready(function(){
 			$("#who_needs_help, #who_needs_help_phone").show().find("input:text, textarea").prop("required", true);
 		}
 	});
+	if ($("input[name='ceo_name']:hidden").length){
+		$("input[name='firstname'], input[name='middlename'], input[name='lastname']").on("change, blur", function(){
+			$("input[name='ceo_name']:hidden").val($("input[name='firstname']").val() + " " + $("input[name='middlename']").val() + " " + $("input[name='lastname']").val());
+		});
+	}
 	$("input[data-mask]").each(function(){
 		$(this).mask($(this).data("mask"));
 	});

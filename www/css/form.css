@@ -19,6 +19,7 @@ fieldset { border-width: 0; }
 .group .field { position: relative; }
 .group .field.radio label, .group .field.checkbox label { display: block; padding-left: 20px; position: relative; margin-top: 5px; }
 .group .field.radio label input[type="radio"], .group .field.checkbox label input[type="checkbox"] { position: absolute; left: 0; top: .25em; }
+.group .description { font-size: 13px; line-height: 1.25em; margin-top: 10px; opacity: .7; }
 .in-row { position: relative; }
 .hint-error { position: absolute; max-width: 100%; left: 0; top: 100%; background: var(--red); color: #fff; font-size: 12px; line-height: 14px; padding: 5px; z-index: 1; margin-top: 1px; }
 .hint-error:hover  { opacity: .5; }
@@ -35,7 +36,7 @@ input[type="text"]:focus, textarea:focus { border-color: var(--blue); box-shadow
 input[type="text"]:focus:invalid, textarea:focus:invalid { border-color: var(--red); box-shadow: inset 0 0 0 1px var(--red); }
 input[type="text"] { height: 40px; }
 textarea { padding-top: 11px; padding-bottom: 11px; }
-input[type="text"].wide, textarea.wide { width: 100%; }
+input[type="text"].wide, textarea.wide { width: 100%; display: block; }
 input[type="text"]:invalid, textarea:invalid, select:invalid, input[type="text"].error, textarea.error, select.error { border-color: var(--red); }
 input[type="button"], input[type="submit"], button { display: inline-block; background: var(--blue); border: none; text-align: center; padding: 0 15px; color: #fff; border-radius: 2px; height: 40px; outline: none; transition: background 0.3s ease, color 0.3s ease; cursor: pointer; }
 input[type="button"]:focus, input[type="submit"]:focus, button:focus { background: #0952ef; }

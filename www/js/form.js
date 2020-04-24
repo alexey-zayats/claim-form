@@ -37,11 +37,9 @@ $(document).ready(function(){
 		$form = $(this);
 		$form.find("button[type='submit']").prop("disabled",true);
 		var formObj = {};
-		$form.find(".group:not('.people') input:text, .group textarea, input:hidden").each(function(){
+		$form.find(".group:not('.people') input:text, .group textarea, input:hidden, input:radio:checked, input:checkbox:checked").each(function(){
 			formObj[$(this).attr("name")] = $(this).val();
 		});
-		formObj.activity_kind = $("input[name='activity_kind']:radio:checked").val();
-		formObj.reason = $("input[name='reason']:radio:checked").val();
 		formObj.people = [];
 		$form.find(".group.people .car-fields").each(function(){
 			var peopleObj = {};
@@ -49,9 +47,6 @@ $(document).ready(function(){
 				peopleObj[$(this).attr("name")] = $(this).val();
 			});
 			formObj.people.push(peopleObj);
-		});
-		$form.find("input:checkbox:checked").each(function(){
-			formObj[$(this).attr("name")] = $(this).val();
 		});
 		window.formData = formObj;
 		$("#status").removeAttr("class").empty();

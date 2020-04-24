@@ -9,7 +9,7 @@ $(document).ready(function(){
 	}).on("keypress", "input", function(){
 		$(this).removeClass("error").parents(".field").first().find(".hint-error").remove();
 	}).on("change", "input[name='reason']", function(){
-		if ($(this).val() == "0"){
+		if ($(this).val() == "155"){
 			$("#other-reason").show().find("input:text, textarea").prop("required", true);
 			$("#who_needs_help, #who_needs_help_phone").hide().find("input:text, textarea").prop("required", false);
 		} else {

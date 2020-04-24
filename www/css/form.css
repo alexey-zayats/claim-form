@@ -30,7 +30,7 @@ fieldset { border-width: 0; }
 #status.success, #success { color: var(--green); font-weight: bold; }
 #status.error { color: var(--red); }
 #status .error-message { margin-bottom: 5px; }
-#success { display: inline; vertical-align: middle; margin-left: 20px; }
+#success { display: inline-block; vertical-align: middle; margin-left: 20px; padding: 8px 0; }
 
 input, textarea, select, button { font-size: 16px; line-height: 16px; }
 input[type="text"], textarea { padding: 0 13px; border: 1px solid #dde1e6; border-radius: 2px; outline: none; transition: all .3s ease; color: #3b4256; }

@@ -61,17 +61,19 @@ $(document).ready(function(){
 	    }).done(function(){
 		    $("#success").text("Ваша заявка отправлена");
 	    }).fail(function(jqXHR){
-//		    $("#status").addClass("error").text(jqXHR.responseJSON.message ? jqXHR.responseJSON.message : "Произошла ошибка. Попробуйте позже");
+			$form.find("button[type='submit']").prop("disabled",false);
 		    window.ajaxErrors = jqXHR;
+		    if (jqXHR.responseJSON.message){
+			    $("#status").addClass("error").html('<div class="error-message nb">' + jqXHR.responseJSON.message + '</div>');
+		    }
 		    if (jqXHR.responseJSON.errors){
 			    $.each(jqXHR.responseJSON.errors, function(key, val){
 				    $("input[name='"+key+"']").addClass("error").parents(".field").first().append('<span class="hint-error">'+val[0]+'</span>');
 				    $.each(val, function(i, v){
-					   $("#status").append('<div class="error-message">' + v + '</div>');
+					   $("#status").append('<div class="error-message nb">' + v + '</div>');
 				    });
 			    });
 		    }
-			$form.find("button[type='submit']").prop("disabled",false);
 	    });
 	});
 });

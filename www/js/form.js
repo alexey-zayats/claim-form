@@ -41,6 +41,7 @@ $(document).ready(function(){
 			formObj[$(this).attr("name")] = $(this).val();
 		});
 		formObj.activity_kind = $("input[name='activity_kind']:radio:checked").val();
+		formObj.reason = $("input[name='reason']:radio:checked").val();
 		formObj.people = [];
 		$form.find(".group.people .car-fields").each(function(){
 			var peopleObj = {};

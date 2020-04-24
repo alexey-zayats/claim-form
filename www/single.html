@@ -22,9 +22,9 @@
 			<div class="group people">
 				<div class="title"><label for="field-lastname">Ваши Ф.И.О. и номер автомобиля, зарегистрированного в&nbsp;России</label></div>
 				<div class="field car-fields">
-					<div class="in-row wide"><input type="text" class="wide" name="lastname" id="field-lastname" placeholder="Фамилия" required/></div>
-					<div class="in-row wide"><input type="text" class="wide" name="firstname" placeholder="Имя" required/></div>
-					<div class="in-row wide"><input type="text" class="wide" name="middlename" placeholder="Отчество" required/></div>
+					<div class="in-row wide"><input type="text" class="wide" name="lastname" id="field-lastname" placeholder="Фамилия" pattern="[А-Яа-я-\s]+" required/></div>
+					<div class="in-row wide"><input type="text" class="wide" name="firstname" placeholder="Имя" pattern="[А-Яа-я-\s]+" required/></div>
+					<div class="in-row wide"><input type="text" class="wide" name="middlename" placeholder="Отчество" pattern="[А-Яа-я-\s]+" required/></div>
 					<div class="in-row"><input type="text" size="11" name="car" placeholder="К001АА23" class="licence-number uppercase" required/></div>
 				</div>
 			</div>
@@ -34,7 +34,7 @@
 			</div>
 			<div class="group">
 				<div class="title"><label for="field-city_from">Город проживания</label></div>
-				<div class="field"><input type="text" size="22" name="city_from" id="field-city_from" placeholder="" required/></div>
+				<div class="field"><input type="text" size="22" name="city_from" id="field-city_from" placeholder="" pattern="[А-Яа-я-\s]+" required/></div>
 				<div class="description">Пример: Краснодар</div>
 			</div>
 			<div class="group">
@@ -44,7 +44,7 @@
 			</div>
 			<div class="group">
 				<div class="title"><label for="field-city_to">Город назначения</label></div>
-				<div class="field"><input type="text" size="22" name="city_to" id="field-city_to" placeholder="" required/></div>
+				<div class="field"><input type="text" size="22" name="city_to" id="field-city_to" placeholder="" pattern="[А-Яа-я-\s]+" required/></div>
 				<div class="description">Пример: Геленджик</div>
 			</div>
 			<div class="group">

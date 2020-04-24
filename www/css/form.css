@@ -26,7 +26,7 @@ fieldset { border-width: 0; }
 .in-row.wide { width: 100%; margin-bottom: 10px; }
 .hint-error { position: absolute; max-width: 100%; left: 0; top: 100%; background: var(--red); color: #fff; font-size: 12px; line-height: 14px; padding: 5px; z-index: 1; margin-top: 1px; }
 .hint-error:hover  { opacity: .5; }
-#status { margin-top: 10px; }
+#status { margin-bottom: 10px; }
 #status.success, #success { color: var(--green); font-weight: bold; }
 #status.error { color: var(--red); }
 #status .error-message { margin-bottom: 5px; }

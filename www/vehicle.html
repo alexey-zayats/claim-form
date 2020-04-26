@@ -111,7 +111,7 @@
 			</div>
 			<div class="group">
 				<div class="title"><label for="field-ceo_name">Ф.И.О. руководителя</label></div>
-				<div class="field"><input type="text" name="ceo_name" id="field-ceo_name" placeholder="Ф.И.О. руководителя" class="wide" required/></div>
+				<div class="field"><input type="text" name="ceo_name" id="field-ceo_name" placeholder="Ф.И.О. руководителя" pattern="[А-Яа-я-\s]+" class="wide" required/></div>
 			</div>
 			<div class="group">
 				<div class="title"><label for="field-ceo_phone">Контактный телефон руководителя</label></div>
@@ -125,9 +125,9 @@
 				<div class="title">Перечень автомобилей, для которых нужны пропуска на&nbsp;время карантина</div>
 				<div class="field car-fields">
 					<div class="in-row"><input type="text" size="11" name="car" placeholder="К001АА23rus" required/></div>
-					<div class="in-row"><input type="text" size="22" name="lastname" placeholder="Фамилия" required/></div>
-					<div class="in-row"><input type="text" size="22" name="firstname" placeholder="Имя" required/></div>
-					<div class="in-row"><input type="text" size="22" name="middlename" placeholder="Отчество" required/></div>
+					<div class="in-row"><input type="text" size="22" name="lastname" placeholder="Фамилия" pattern="[А-Яа-я-\s]+" required/></div>
+					<div class="in-row"><input type="text" size="22" name="firstname" placeholder="Имя" pattern="[А-Яа-я-\s]+" required/></div>
+					<div class="in-row"><input type="text" size="22" name="middlename" placeholder="Отчество" pattern="[А-Яа-я-\s]+" required/></div>
 					<div class="in-row minus"><button type="button" class="square remove-car">&minus;</button></div>
 					<div class="in-row plus"><button type="button" class="square add-car">+</button></div>
 				</div>
